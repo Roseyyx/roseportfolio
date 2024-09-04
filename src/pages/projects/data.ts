@@ -43,7 +43,7 @@ export const projectData: ProjectData = [
         text: 'Portfolio',
         description: 'This website! Built with Astro, Vue.js and Unocss',
         icon: 'i-carbon-campsite',
-        href: '/',
+        href: 'https://github.com/Roseyyx/roseportfolio',
       },
     ],
   },
