@@ -1,0 +1,45 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import siteConfig from '@/site-config'
+---
+
+<BaseLayout description={siteConfig.description}>
+  <article class="prose">
+    <h1 class="text-title">Rose's portfolio website</h1>
+    <p>
+      Meow, I'm Rose, a software engineer who loves software tampering and software security!
+    </p>
+    <p>
+      I am <b>19</b> years old and I go by <b>she/her</b>, I am located in <b>The Netherlands</b>.
+      I love making <b>Cheat Software</b>, messing around with <b>DRM protection</b>, <b>Reverse Engineering</b> software and making my own <b>Security Software</b>.
+      I am currently studying Software Engineering.
+    </p>
+    <hr class="hr-line" />
+    <p>Find me on</p>
+    <p class="flex gap-x-4 gap-y-2 flex-wrap">
+      {
+        siteConfig.socialLinks.map((link) => (
+          <a
+            aria-label={link.text}
+            href={link.href}
+            target="_blank"
+            class="prose-link"
+          >
+            <i class:list={[link.icon]} />
+            {link.text}
+          </a>
+        ))
+      }
+    </p>
+    <p>
+      If you have any questions, please email me at
+      <a
+        prose-link
+        aria-label={siteConfig.email}
+        href={`mailto:${siteConfig.email}`}
+      >
+        {siteConfig.email}
+      </a>, or you can contact me on discord <b>arty6310</b>
+    </p>
+  </article>
+</BaseLayout>
